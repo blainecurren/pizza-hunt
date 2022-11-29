@@ -1,3 +1,3 @@
-const Pizza = reqquire("./Pizza");
+const Pizza = require("./Pizza");
 
 module.exports = { Pizza };
