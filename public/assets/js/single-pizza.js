@@ -18,7 +18,9 @@ function getPizza() {
 
   // get pizza info
   fetch(`/api/pizzas/${pizzaId}`).then((response) => {
-    console.log(response);
+    if (!response.ok) {
+      throw new Error({ message: "Something went wrong!" });
+    }
     return response.json();
   });
   then(printPizza);
